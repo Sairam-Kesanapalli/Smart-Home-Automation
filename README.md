@@ -102,6 +102,7 @@ Implemented in [main.ino](main.ino):
 ## Wiring Diagram
 
 - Recommended file path for diagram: `docs/wiring/wiring-diagram.png`
+  
 ![Wiring Diagram](docs/wiring/wiring-diagram.jpeg)
 
 ## Firmware Logic
