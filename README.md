@@ -29,6 +29,22 @@ The goal is straightforward: turn lights on only when needed, preserve user cont
 - Sleep Mode -> light stays OFF.
 - Local and app controls can override normal sensor flow.
 
+## Project Preview
+
+Add your real project media to make this README portfolio-ready:
+
+- LCD status view image path: `docs/images/lcd-status.jpg`
+- Hardware setup image path: `docs/images/hardware-setup.jpg`
+- Blynk dashboard screenshot path: `docs/images/blynk-dashboard.jpg`
+
+Example markdown you can enable after adding images:
+
+```markdown
+![LCD Status](docs/images/lcd-status.jpg)
+![Hardware Setup](docs/images/hardware-setup.jpg)
+![Blynk Dashboard](docs/images/blynk-dashboard.jpg)
+```
+
 ## System Architecture
 
 ```mermaid
@@ -84,6 +100,17 @@ Implemented in [main.ino](main.ino):
 | RELAY_PIN | 4 |
 | BUTTON_PIN | 14 |
 | LDR_PIN | 34 |
+
+## Wiring Diagram
+
+- Recommended file path for diagram: `docs/wiring/wiring-diagram.png`
+- Keep one clean labeled wiring image that maps every GPIO in the table above.
+
+Example markdown:
+
+```markdown
+![Wiring Diagram](docs/wiring/wiring-diagram.png)
+```
 
 ## Firmware Logic
 
@@ -141,6 +168,29 @@ Report alignment note: The report mentions NTP-scheduled sleep windows (23:00-06
 5. Wire components using the pin table above.
 6. Upload to ESP32.
 7. Open Serial Monitor at `115200` and verify sensor logs + LCD updates.
+
+## Troubleshooting
+
+- Problem: No reading from HC-SR04 (`-1` distance often).
+	- Check TRIG/ECHO wiring and shared GND.
+	- Confirm Echo pin is level-shifted/divided to 3.3V for ESP32.
+	- Verify sensor has stable 5V supply.
+- Problem: Random resets or unstable behavior.
+	- Avoid powering heavy loads from ESP32 board pins.
+	- Use a stable external supply and proper common ground.
+	- Isolate relay supply noise if needed.
+- Problem: Light does not turn ON in Auto behavior.
+	- Check ambient value versus `DARK_THRESHOLD`.
+	- Validate relay module logic polarity (active HIGH/LOW type).
+	- Confirm occupancy count is increasing on entry events.
+- Problem: Blynk controls not responding.
+	- Verify Wi-Fi credentials and internet access.
+	- Confirm correct Blynk template/auth token.
+	- Ensure virtual pins match firmware (`V0`, `V2`).
+- Problem: LCD not displaying text.
+	- Recheck I2C address (common: `0x27`/`0x3F`).
+	- Confirm SDA/SCL pins for your ESP32 board variant.
+	- Test LCD power and contrast adjustment.
 
 ## Repository Structure
 
