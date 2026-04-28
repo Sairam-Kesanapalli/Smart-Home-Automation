@@ -31,8 +31,6 @@ The goal is straightforward: turn lights on only when needed, preserve user cont
 
 ## Project Preview
 
-Add your real project media to make this README portfolio-ready:
-
 - LCD status view image path: `docs/images/lcd-status.jpg`
 - Hardware setup image path: `docs/images/hardware-setup.jpg`
 - Blynk dashboard screenshot path: `docs/images/blynk-dashboard.jpg`
