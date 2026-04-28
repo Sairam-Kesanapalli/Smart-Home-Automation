@@ -103,12 +103,8 @@ Implemented in [main.ino](main.ino):
 
 - Recommended file path for diagram: `docs/wiring/wiring-diagram.png`
 - Keep one clean labeled wiring image that maps every GPIO in the table above.
-
-Example markdown:
-
-```markdown
 ![Wiring Diagram](docs/wiring/wiring-diagram.png)
-```
+
 
 ## Firmware Logic
 
