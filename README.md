@@ -35,11 +35,15 @@ The goal is straightforward: turn lights on only when needed, preserve user cont
 - Hardware setup image path: `docs/images/hardware-setup.jpg`
 - Blynk dashboard screenshot path: `docs/images/blynk-dashboard.jpg`
 
+### Hardware Setup
+
+![Hardware Setup](docs/images/hardware-setup.jpg)
+
+This shows the complete ESP32-based setup including ultrasonic sensor, relay module, LCD, and power connections as implemented in this project.
 Example markdown you can enable after adding images:
 
 ```markdown
 ![LCD Status](docs/images/lcd-status.jpg)
-![Hardware Setup](docs/images/hardware-setup.jpg)
 ![Blynk Dashboard](docs/images/blynk-dashboard.jpg)
 ```
 
