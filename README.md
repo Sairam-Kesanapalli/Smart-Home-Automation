@@ -13,14 +13,14 @@
 
 ## Overview
 
-This project is a practical single-room automation prototype developed by Team 7 (IIIT Dharwad, AY 2025-2026). It uses an ESP32 to combine:
+Smart Room Automation — developed by Team 7 (IIIT Dharwad, AY 2025–2026). It uses an ESP32 to:
 
-- occupancy estimation from ultrasonic distance trends,
-- ambient brightness sensing via LDR,
-- local user controls with a physical button,
-- remote control and mode toggles through Blynk.
+- detect occupancy from ultrasonic distance trends
+- sense ambient brightness with an LDR
+- accept local input from a push button
+- allow remote control and mode toggles via Blynk
 
-The goal is straightforward: turn lights on only when needed, preserve user control, and reduce energy waste.
+Goal: turn lights on only when needed while keeping user control.
 
 ## Demo Behavior
 
@@ -80,7 +80,7 @@ flowchart LR
 
 ### Safety Note
 
-HC-SR04 Echo is 5V while ESP32 GPIO is 3.3V logic. Use a voltage divider (report example: $2k\Omega + 1k\Omega$) before the Echo pin input.
+HC-SR04 Echo is a 5V signal; add a voltage divider (2kΩ + 1kΩ) to protect the ESP32 Echo input.
 
 ## Pin Mapping
 
@@ -96,7 +96,6 @@ Implemented in [main.ino](main.ino):
 
 ## Wiring Diagram
 
-- Recommended file path for diagram: `docs/wiring/wiring-diagram.png`
 ![Wiring Diagram](docs/wiring/final-wiring-diagram.jpeg)
 ## Firmware Logic
 
@@ -122,7 +121,7 @@ Combined with median filtering and trigger cooldown, this improves reliability a
 3. Sleep Mode (forces OFF)
 4. Normal occupancy + LDR logic
 
-Report alignment note: The report mentions NTP-scheduled sleep windows (23:00-06:00). The current code does not yet implement NTP sleep scheduling; Sleep Mode is currently controlled through Blynk (`V2`).
+Note: The report describes NTP-based sleep scheduling (23:00–06:00). This firmware does not implement NTP; Sleep Mode is set via Blynk (`V2`).
 
 ## Blynk Mapping
 
@@ -183,11 +182,11 @@ Report alignment note: The report mentions NTP-scheduled sleep windows (23:00-06
 - [main.ino](main.ino) - ESP32 firmware source
 - [README.md](README.md) - project documentation
 
-## Challenges Solved (From Report)
+## Issues addressed
 
-- Echo-pin voltage protection for ESP32 safety
-- Power-distribution improvements after random shutdowns
-- Priority fixes to prevent automatic logic from overriding user intent
+- Added Echo-pin voltage protection to keep the ESP32 safe
+- Fixed power-distribution problems that caused shutdowns
+- Adjusted mode priority so automatic logic doesn't override user input
 
 ## Roadmap
 
