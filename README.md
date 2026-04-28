@@ -30,14 +30,7 @@ The goal is straightforward: turn lights on only when needed, preserve user cont
 - Local and app controls can override normal sensor flow.
 
 ## Project Preview
-
-- LCD status view image path: `docs/images/lcd-status.jpg`
-- Hardware setup image path: `docs/images/hardware-setup.jpg`
-- Blynk dashboard screenshot path: `docs/images/blynk-dashboard.jpg`
-
-
-Example markdown you can enable after adding images:
-
+**Hardware Diagram**
 ![Hardware Diagram](docs/images/hardware-setup.jpg)
 
 ```markdown
