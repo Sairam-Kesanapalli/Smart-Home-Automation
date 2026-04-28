@@ -1,14 +1,14 @@
-#define BLYNK_TEMPLATE_ID "TMPL35Qk5ZAf-"
+#define BLYNK_TEMPLATE_ID "YOUR BLYNK_TEMPLATE_ID"
 #define BLYNK_TEMPLATE_NAME "Door Lock Project"
-#define BLYNK_AUTH_TOKEN "Gj93iuL7Nxj0anWzhlYTfYlWNt7w2ud2"
+#define BLYNK_AUTH_TOKEN "YOUR BLYNK_AUTH_TOKEN"
 
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-char ssid[] = "otom";
-char pass[] = "88888888";
+char ssid[] = "WIFI_NAME";
+char pass[] = "WIFI_PASSWORD";
 
 // LCD
 LiquidCrystal_I2C lcd(0x27, 16, 2);
