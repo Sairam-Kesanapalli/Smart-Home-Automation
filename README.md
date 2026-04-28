@@ -38,6 +38,8 @@ The goal is straightforward: turn lights on only when needed, preserve user cont
 
 Example markdown you can enable after adding images:
 
+![Hardware Diagram](docs/images/hardware-setup.jpg)
+
 ```markdown
 ![LCD Status](docs/images/lcd-status.jpg)
 ![Blynk Dashboard](docs/images/blynk-dashboard.jpg)
